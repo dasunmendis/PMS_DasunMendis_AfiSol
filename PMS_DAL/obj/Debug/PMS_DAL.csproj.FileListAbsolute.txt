@@ -1,0 +1,8 @@
+C:\Users\Lenovo G510\Desktop\PMS_DasunMendiss2\PMS_DAL\bin\Debug\PMS_DAL.dll.config
+C:\Users\Lenovo G510\Desktop\PMS_DasunMendiss2\PMS_DAL\bin\Debug\PMS_DAL.dll
+C:\Users\Lenovo G510\Desktop\PMS_DasunMendiss2\PMS_DAL\bin\Debug\PMS_DAL.pdb
+C:\Users\Lenovo G510\Desktop\PMS_DasunMendiss2\PMS_DAL\bin\Debug\EntityFramework.dll
+C:\Users\Lenovo G510\Desktop\PMS_DasunMendiss2\PMS_DAL\bin\Debug\EntityFramework.xml
+C:\Users\Lenovo G510\Desktop\PMS_DasunMendiss2\PMS_DAL\obj\Debug\PMS_DAL.csprojResolveAssemblyReference.cache
+C:\Users\Lenovo G510\Desktop\PMS_DasunMendiss2\PMS_DAL\obj\Debug\PMS_DAL.dll
+C:\Users\Lenovo G510\Desktop\PMS_DasunMendiss2\PMS_DAL\obj\Debug\PMS_DAL.pdb

@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+            </p>
+        </div>
+    </section>
+}
+<h3>Refer followings:</h3>
+<ol class="round">
+    <li >
+        @Html.ActionLink("View Designations", "ViewDesignations", "Designations")
+    </li>
+    <li >
+        @Html.ActionLink("View Employees", "ViewEmployees", "Employees")
+    </li>
+    <li >
+         @Html.ActionLink("View Report", "ViewReport", "Reports")
+    </li>
+</ol>

@@ -1,0 +1,9 @@
+C:\Users\Lenovo G510\Desktop\PMS_DasunMendiss2\PMS_Services\bin\Debug\PMS_Services.dll
+C:\Users\Lenovo G510\Desktop\PMS_DasunMendiss2\PMS_Services\bin\Debug\PMS_Services.pdb
+C:\Users\Lenovo G510\Desktop\PMS_DasunMendiss2\PMS_Services\obj\Debug\PMS_Services.csprojResolveAssemblyReference.cache
+C:\Users\Lenovo G510\Desktop\PMS_DasunMendiss2\PMS_Services\obj\Debug\PMS_Services.dll
+C:\Users\Lenovo G510\Desktop\PMS_DasunMendiss2\PMS_Services\obj\Debug\PMS_Services.pdb
+C:\Users\Lenovo G510\Desktop\PMS_DasunMendiss2\PMS_Services\bin\Debug\PMS_DAL.dll
+C:\Users\Lenovo G510\Desktop\PMS_DasunMendiss2\PMS_Services\bin\Debug\EntityFramework.dll
+C:\Users\Lenovo G510\Desktop\PMS_DasunMendiss2\PMS_Services\bin\Debug\PMS_DAL.pdb
+C:\Users\Lenovo G510\Desktop\PMS_DasunMendiss2\PMS_Services\bin\Debug\EntityFramework.xml

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMS_Web", "PMS_Web\PMS_Web.csproj", "{C1B678EC-CEC3-4F03-B260-CD8D04892433}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMS_Services", "PMS_Services\PMS_Services.csproj", "{5642E928-8F8C-4A59-9692-413B7B93269E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMS_DAL", "PMS_DAL\PMS_DAL.csproj", "{7C2BC219-37EC-4957-942D-30D752074D27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1B678EC-CEC3-4F03-B260-CD8D04892433}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1B678EC-CEC3-4F03-B260-CD8D04892433}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1B678EC-CEC3-4F03-B260-CD8D04892433}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1B678EC-CEC3-4F03-B260-CD8D04892433}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5642E928-8F8C-4A59-9692-413B7B93269E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5642E928-8F8C-4A59-9692-413B7B93269E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5642E928-8F8C-4A59-9692-413B7B93269E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5642E928-8F8C-4A59-9692-413B7B93269E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C2BC219-37EC-4957-942D-30D752074D27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C2BC219-37EC-4957-942D-30D752074D27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C2BC219-37EC-4957-942D-30D752074D27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C2BC219-37EC-4957-942D-30D752074D27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

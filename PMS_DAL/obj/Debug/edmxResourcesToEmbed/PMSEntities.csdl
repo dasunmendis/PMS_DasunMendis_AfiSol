@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PMS_EntitiesModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="PMS_Entities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Designations" EntityType="PMS_EntitiesModel.Designation" />
+    <EntitySet Name="Employees" EntityType="PMS_EntitiesModel.Employee" />
+    <AssociationSet Name="FK_Employee_Designation" Association="PMS_EntitiesModel.FK_Employee_Designation">
+      <End Role="Designation" EntitySet="Designations" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Designation">
+    <Key>
+      <PropertyRef Name="SSID" />
+    </Key>
+    <Property Name="SSID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Designation1" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Basic" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="OT1" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="OT2" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="Intensive" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Employees" Relationship="PMS_EntitiesModel.FK_Employee_Designation" FromRole="Designation" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmpID" />
+    </Key>
+    <Property Name="EmpID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="FName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Tel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Mobile" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="NIC" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DOB" Type="DateTime" Precision="3" />
+    <Property Name="Gender" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="JoinDate" Type="DateTime" Precision="3" />
+    <Property Name="PosSSID" Type="Int32" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Designation" Relationship="PMS_EntitiesModel.FK_Employee_Designation" FromRole="Employee" ToRole="Designation" />
+  </EntityType>
+  <Association Name="FK_Employee_Designation">
+    <End Role="Designation" Type="PMS_EntitiesModel.Designation" Multiplicity="0..1" />
+    <End Role="Employee" Type="PMS_EntitiesModel.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Designation">
+        <PropertyRef Name="SSID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="PosSSID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

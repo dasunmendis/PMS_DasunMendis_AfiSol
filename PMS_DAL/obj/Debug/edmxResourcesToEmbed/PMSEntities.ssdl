@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PMS_EntitiesModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="PMS_EntitiesModelStoreContainer">
+    <EntitySet Name="Designation" EntityType="PMS_EntitiesModel.Store.Designation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Employee" EntityType="PMS_EntitiesModel.Store.Employee" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Employee_Designation" Association="PMS_EntitiesModel.Store.FK_Employee_Designation">
+      <End Role="Designation" EntitySet="Designation" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Designation">
+    <Key>
+      <PropertyRef Name="SSID" />
+    </Key>
+    <Property Name="SSID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Designation" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="Basic" Type="decimal" Nullable="false" />
+    <Property Name="OT1" Type="decimal" Nullable="false" />
+    <Property Name="OT2" Type="decimal" Nullable="false" />
+    <Property Name="Intensive" Type="decimal" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmpID" />
+    </Key>
+    <Property Name="EmpID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="LName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="250" />
+    <Property Name="Tel" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="NIC" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DOB" Type="datetime" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+    <Property Name="JoinDate" Type="datetime" />
+    <Property Name="PosSSID" Type="int" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_Employee_Designation">
+    <End Role="Designation" Type="PMS_EntitiesModel.Store.Designation" Multiplicity="0..1" />
+    <End Role="Employee" Type="PMS_EntitiesModel.Store.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Designation">
+        <PropertyRef Name="SSID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="PosSSID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

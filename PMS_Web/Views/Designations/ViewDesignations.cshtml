@@ -1,0 +1,105 @@
+﻿@model IEnumerable<PMS_DAL.Designation>
+
+@{
+    ViewBag.Title = "PMS | Designations";
+}
+
+<h2>Designations List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div>
+    <table id="t01">
+        <thead>
+            <th>SSID</th>
+            <th>Designation</th>
+            <th>Basic</th>
+            <th>OT1</th>
+            <th>OT2</th>
+            <th>Intensive</th>
+            <th>CreatedBy</th>
+            <th>CreatedDate</th>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SSID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Designation1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Basic)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OT1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OT2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Intensive)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedBy)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedDate)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.SSID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.SSID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+<style>
+    table#t01
+    {
+        width: 100%;
+        background-color: #f1f1c1;
+    }
+
+        table#t01 tr:nth-child(even)
+        {
+            background-color: #eee;
+        }
+
+        table#t01 tr:nth-child(odd)
+        {
+            background-color: #fff;
+        }
+
+        table#t01 th
+        {
+            color: white;
+            background-color: blue;
+        }
+
+    table, th, td
+    {
+        border: 1px solid black;
+    }
+
+    table, th, td
+    {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    table, th, td
+    {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th, td
+    {
+        padding: 15px;
+    }
+</style>
